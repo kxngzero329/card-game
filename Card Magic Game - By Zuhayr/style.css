@@ -1,0 +1,219 @@
+* {
+  text-align: center;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  background: radial-gradient(circle, #1b1b1b, #000);
+  color: #fff;
+  text-align: center;
+  padding: 1.5rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* HEADER */
+header {
+  padding: 1.5em;
+
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: #ff4875;
+  text-shadow: 0 0 10px #ff3366;
+}
+
+header h2 {
+  font-size: 1.8rem;
+  color: #00ffff;
+  text-shadow: 0 0 8px #00ffff;
+  margin: 10px;
+}
+
+.instructions {
+  font-size: 1.1rem;
+  margin-bottom: 1.9rem;
+}
+
+header p {
+  margin: 25px auto;
+}
+
+/* MAIN */
+main {
+  margin: 0 auto;
+  padding: 1em;
+}
+
+main h2,
+h2.mainheader {
+  font-size: 2em;
+  margin: 2em 0 1em;
+}
+
+/* BUTTONS */
+button {
+  background: #222;
+  color: #fff;
+  border: 2px solid #ff3366;
+  padding: 0.6rem 1.2rem;
+  margin: 1rem 0.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: #ff3366;
+  color: #000;
+  box-shadow: 0 0 12px #ff3366;
+}
+
+/* BUTTON WRAPPERS */
+.continueButton,
+.changeCardsButton,
+.pileselection {
+  display: none;
+  /* remain hidden until shown by JS */
+  margin: 1em auto;
+}
+
+/* INSTRUCTIONS TEXT */
+.instructions {
+  font-size: 0.8em;
+  margin-top: 0.5em;
+}
+
+/* CARD DISPLAY */
+.allcards {
+  text-align: center;
+  margin-top: 1em;
+}
+
+.allcards img {
+  height: 7em;
+  margin: 5px;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease;
+}
+
+.allcards img:hover {
+  transform: scale(1.05);
+  border: 1px solid #00ffff;
+  box-shadow: 0 0 12px #00ffff;
+}
+
+/* PILES */
+main .piles {
+  display: inline-flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 1em;
+  gap: 1em;
+}
+
+.cardpiles {
+  height: 7em;
+  margin: 5px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.newrow {
+  position: relative;
+  top: -3em;
+}
+
+.correctCard {
+  margin: 2em;
+}
+
+/* Only shown later via JS */
+.newCardLine {
+  display: none;
+}
+
+/* FOOTER */
+footer {
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+footer a {
+  color: #00ffff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* MEDIA QUERIES */
+@media only screen and (min-width: 396px) {
+  .allcards img {
+    height: 9em;
+  }
+}
+
+@media only screen and (min-width: 488px),
+only screen and (min-width: 634px) {
+  .allcards img {
+    height: 6em;
+  }
+
+  .allcards {
+    max-width: 600px;
+  }
+
+  .instructions {
+    font-size: 1em;
+    line-height: 1.2em;
+  }
+}
+
+@media only screen and (min-width: 784px) {
+  .allcards img {
+    height: 9em;
+  }
+
+  .allcards {
+    max-width: 850px;
+  }
+}
+
+@media only screen and (min-width: 795px),
+only screen and (min-width: 990px),
+only screen and (min-width: 1315px) {
+  .newCardLine {
+    display: flex;
+  }
+
+  .cardpiles {
+    height: 8em;
+  }
+
+  .piles div {
+    padding: 0 0.5em;
+  }
+
+  .allcards img {
+    height: 10em;
+  }
+
+  .allcards {
+    max-width: 1000px;
+  }
+}
+
+@media only screen and (min-width: 1245px) {
+  .allcards img {
+    height: 11em;
+  }
+}
